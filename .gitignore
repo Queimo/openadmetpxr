@@ -1,6 +1,5 @@
-*.csv
-*.json
-*.log
+# *.csv
+# *.json
+# *.log
 *.pyc
-*.png
-clamp_clip/checkpoint.pt
+data/models/clamp_clip/checkpoint.pt

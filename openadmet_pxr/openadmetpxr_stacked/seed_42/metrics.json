@@ -1,0 +1,51 @@
+{
+  "benchmark": "openadmetpxr_stacked",
+  "seed": 42,
+  "train_csv": "openadmet_pxr/internal_split/internal_train.csv",
+  "test_csv": "openadmet_pxr/internal_split/internal_test.csv",
+  "chemeleon_device": "cuda",
+  "batch_size": 256,
+  "cv_n_splits": 5,
+  "cv_split_seed": 42,
+  "n_train": 3627,
+  "n_test": 513,
+  "base_feature_dim": 2048,
+  "stacked_feature_dim": 2052,
+  "auxiliary_targets": [
+    "pEC50_ci.lower (-log10(molarity))",
+    "pEC50_ci.upper (-log10(molarity))",
+    "Emax_ci.upper (log2FC vs. baseline)",
+    "Emax.vs.pos.ctrl_ci.upper (dimensionless)"
+  ],
+  "auxiliary_oof_metrics": [
+    {
+      "target": "pEC50_ci.lower (-log10(molarity))",
+      "n_train_available": 3627,
+      "oof_rmse": 0.8251585960388184,
+      "oof_pearson": 0.7964108021441579
+    },
+    {
+      "target": "pEC50_ci.upper (-log10(molarity))",
+      "n_train_available": 3627,
+      "oof_rmse": 0.5291030406951904,
+      "oof_pearson": 0.802273484952982
+    },
+    {
+      "target": "Emax_ci.upper (log2FC vs. baseline)",
+      "n_train_available": 3627,
+      "oof_rmse": 0.6278737187385559,
+      "oof_pearson": 0.5653593692520844
+    },
+    {
+      "target": "Emax.vs.pos.ctrl_ci.upper (dimensionless)",
+      "n_train_available": 3627,
+      "oof_rmse": 0.7685719132423401,
+      "oof_pearson": 0.41426660898552
+    }
+  ],
+  "internal_test_metrics": {
+    "rmse": 0.6040568947792053,
+    "mae": 0.45113444328308105,
+    "pearson": 0.7650351195443557
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "benchmark": "openadmetpxr_internal",
+  "seed": 42,
+  "split_mode": "internal",
+  "train_csv": "openadmet_pxr/internal_split/internal_train.csv",
+  "test_csv": "openadmet_pxr/internal_split/internal_test.csv",
+  "cv_n_splits": 5,
+  "cv_split_seed": 42,
+  "fold_rmses": [
+    0.7163516283035278,
+    0.6643141508102417,
+    0.6960929036140442,
+    0.6618353724479675,
+    0.6872270703315735
+  ],
+  "rmse_mean": 0.6851642251014709,
+  "rmse_std": 0.022777765622646447
+}

@@ -41,8 +41,8 @@ INTERNAL_TEST_CSV = Path(
 AUXILIARY_TARGET_COLUMNS = [
     "pEC50_ci.lower (-log10(molarity))",
     "pEC50_ci.upper (-log10(molarity))",
-    "Emax_ci.upper (log2FC vs. baseline)",
-    "Emax.vs.pos.ctrl_ci.upper (dimensionless)",
+    # "Emax_ci.upper (log2FC vs. baseline)",
+    # "Emax.vs.pos.ctrl_ci.upper (dimensionless)",
 ]
 
 print(f"Running benchmark set {BENCHMARK_SET}")

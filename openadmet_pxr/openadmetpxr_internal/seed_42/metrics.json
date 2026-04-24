@@ -1,0 +1,30 @@
+{
+  "benchmark": "openadmetpxr_internal",
+  "seed": 42,
+  "split_mode": "internal",
+  "train_csv": "openadmet_pxr/internal_split/internal_train.csv",
+  "test_csv": "openadmet_pxr/internal_split/internal_test.csv",
+  "chemeleon_device": "cuda",
+  "batch_size": 256,
+  "cv_n_splits": 5,
+  "cv_split_seed": 42,
+  "n_train": 3627,
+  "n_test": 513,
+  "feature_dim": 2048,
+  "cv_metrics": {
+    "fold_rmses": [
+      0.7163516283035278,
+      0.6643141508102417,
+      0.6960929036140442,
+      0.6618353724479675,
+      0.6872270703315735
+    ],
+    "rmse_mean": 0.6851642251014709,
+    "rmse_std": 0.022777765622646447
+  },
+  "internal_test_metrics": {
+    "rmse": 0.616658627986908,
+    "mae": 0.4622576832771301,
+    "pearson": 0.7576710907141834
+  }
+}

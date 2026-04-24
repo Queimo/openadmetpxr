@@ -1,0 +1,16 @@
+{
+  "train_csv": "/rwthfs/rz/cluster/hpcwork/py110287/tabicl/moltabicl/openadmet/openadmet_pxr/openadmetpxr/train.csv",
+  "test_csv": "/rwthfs/rz/cluster/hpcwork/py110287/tabicl/moltabicl/openadmet/openadmet_pxr/openadmetpxr/test.csv",
+  "chemeleon_device": "cuda",
+  "batch_size": 256,
+  "n_train_old": 4140,
+  "n_test_old": 513,
+  "n_test_unique": 513,
+  "n_train_new": 3627,
+  "n_internal_test": 513,
+  "row_identity_holds": true,
+  "unique_test_size_matches_internal_test": true,
+  "distance_mean": 1.410760870453907,
+  "distance_median": 1.4117993116378784,
+  "distance_max": 2.315708637237549
+}
