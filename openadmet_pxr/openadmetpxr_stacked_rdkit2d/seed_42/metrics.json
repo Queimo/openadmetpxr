@@ -9,42 +9,28 @@
   "n_train": 3627,
   "n_test": 513,
   "base_feature_dim": 217,
-  "stacked_feature_dim": 221,
+  "stacked_feature_dim": 219,
   "auxiliary_targets": [
     "pEC50_ci.lower (-log10(molarity))",
-    "pEC50_ci.upper (-log10(molarity))",
-    "Emax_ci.upper (log2FC vs. baseline)",
-    "Emax.vs.pos.ctrl_ci.upper (dimensionless)"
+    "pEC50_ci.upper (-log10(molarity))"
   ],
   "auxiliary_oof_metrics": [
     {
       "target": "pEC50_ci.lower (-log10(molarity))",
       "n_train_available": 3627,
-      "oof_rmse": 0.8581812381744385,
-      "oof_pearson": 0.7771938167851866
+      "oof_rmse": 0.858181357383728,
+      "oof_pearson": 0.7771937071262143
     },
     {
       "target": "pEC50_ci.upper (-log10(molarity))",
       "n_train_available": 3627,
-      "oof_rmse": 0.5450389385223389,
-      "oof_pearson": 0.7885404971959634
-    },
-    {
-      "target": "Emax_ci.upper (log2FC vs. baseline)",
-      "n_train_available": 3627,
-      "oof_rmse": 0.6213317513465881,
-      "oof_pearson": 0.5771665509803696
-    },
-    {
-      "target": "Emax.vs.pos.ctrl_ci.upper (dimensionless)",
-      "n_train_available": 3627,
-      "oof_rmse": 0.7709792256355286,
-      "oof_pearson": 0.40853393831397833
+      "oof_rmse": 0.5450388193130493,
+      "oof_pearson": 0.7885405626572375
     }
   ],
   "internal_test_metrics": {
-    "rmse": 0.6286585927009583,
-    "mae": 0.46745380759239197,
-    "pearson": 0.7451030541751119
+    "rmse": 0.6252557039260864,
+    "mae": 0.46709248423576355,
+    "pearson": 0.7475538871839006
   }
 }

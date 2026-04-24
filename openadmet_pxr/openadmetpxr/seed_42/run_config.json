@@ -1,0 +1,53 @@
+{
+  "experiment": {
+    "benchmark": "openadmetpxr",
+    "feature_name": "chemeleon"
+  },
+  "run": {
+    "seed": 42,
+    "split_order": [
+      "internal",
+      "blinded"
+    ],
+    "output_dir": "openadmet_pxr/openadmetpxr",
+    "seed_dir": "openadmet_pxr/openadmetpxr/seed_42"
+  },
+  "data": {
+    "target_column": "pEC50",
+    "internal_train_csv": "openadmet_pxr/internal_split/internal_train.csv",
+    "internal_test_csv": "openadmet_pxr/internal_split/internal_test.csv",
+    "blinded_train_csv": "hf://datasets/openadmet/pxr-challenge-train-test/pxr-challenge_TRAIN.csv",
+    "blinded_test_csv": "hf://datasets/openadmet/pxr-challenge-train-test/pxr-challenge_TEST_BLINDED.csv"
+  },
+  "stages": {
+    "internal": {
+      "train_csv": "openadmet_pxr/internal_split/internal_train.csv",
+      "test_csv": "openadmet_pxr/internal_split/internal_test.csv",
+      "has_test_labels": true
+    },
+    "blinded": {
+      "train_csv": "hf://datasets/openadmet/pxr-challenge-train-test/pxr-challenge_TRAIN.csv",
+      "test_csv": "hf://datasets/openadmet/pxr-challenge-train-test/pxr-challenge_TEST_BLINDED.csv",
+      "has_test_labels": false
+    }
+  },
+  "cv": {
+    "n_splits": 5,
+    "split_seed": 42
+  },
+  "model": {
+    "name": "TabPFNRegressor",
+    "ignore_pretraining_limits": true,
+    "feature_standardization": "fastprop.standard_scale",
+    "target_standardization": "fastprop.standard_scale",
+    "feature_clamp": [
+      -6,
+      6
+    ]
+  },
+  "feature": {
+    "requested_device": "cuda",
+    "resolved_device": "cuda",
+    "batch_size": 256
+  }
+}

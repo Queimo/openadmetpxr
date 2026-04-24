@@ -3,3 +3,4 @@
 # *.log
 *.pyc
 data/models/clamp_clip/checkpoint.pt
+wandb/

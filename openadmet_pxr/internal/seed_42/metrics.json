@@ -1,0 +1,25 @@
+{
+  "benchmark": "internal",
+  "seed": 42,
+  "split_mode": "blinded",
+  "train_csv": "hf://datasets/openadmet/pxr-challenge-train-test/pxr-challenge_TRAIN.csv",
+  "test_csv": "hf://datasets/openadmet/pxr-challenge-train-test/pxr-challenge_TEST_BLINDED.csv",
+  "chemeleon_device": "cuda",
+  "batch_size": 256,
+  "cv_n_splits": 5,
+  "cv_split_seed": 42,
+  "n_train": 4139,
+  "n_test": 513,
+  "feature_dim": 2048,
+  "cv_metrics": {
+    "fold_rmses": [
+      0.6669823527336121,
+      0.6692701578140259,
+      0.6960695385932922,
+      0.6798548102378845,
+      0.6603226065635681
+    ],
+    "rmse_mean": 0.6744998931884766,
+    "rmse_std": 0.013953348541816398
+  }
+}
