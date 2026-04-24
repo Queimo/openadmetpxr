@@ -3,3 +3,4 @@
 *.log
 *.pyc
 *.png
+clamp_clip/checkpoint.pt
